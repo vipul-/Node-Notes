@@ -3,6 +3,12 @@ console.log("App Started");
 const fs = require('fs');
 const os = require('os');
 const notes = require('./notes');
+const _ = require('lodash');
+
+var arr = [1,2,1, "Andrew", "Azure", "Andrew"];
+
+var u = _.uniq(arr);
+console.log(u);
 
 newNote = notes.addNote();
 
