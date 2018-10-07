@@ -1,6 +1,24 @@
 console.log("required successfully!");
 
-module.exports.addNote = () => {
-    console.log("New Note");
-    return "Note Added";
+var addNote = (title, body) => {
+    console.log(`Adding Note \n ${title} \n ${body}`);
+};
+
+var getAll = () => {
+    console.log("Showing all notes");
+};
+
+var removeNote = (title) => {
+    console.log(`Removing ${title}`);
+};
+
+var getNote = (title) => {
+    console.log(`Fetching ${title}`);
+};
+
+module.exports =  {
+    addNote,
+    getAll,
+    removeNote,
+    getNote
 };
