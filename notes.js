@@ -33,7 +33,10 @@ var getAll = () => {
 };
 
 var removeNote = (title) => {
-    console.log(`Removing ${title}`);
+    var notes = fetchNotes();
+    var filteredNotes = notes.filter((note) => note.title !== title);
+    saveNotes(filteredNotes);
+    return notes.length !== filteredNotes.length;
 };
 
 var getNote = (title) => {
