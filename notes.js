@@ -29,7 +29,7 @@ var addNote = (title, body) => {
 };
 
 var getAll = () => {
-    console.log("Showing all notes");
+    return fetchNotes();
 };
 
 var removeNote = (title) => {

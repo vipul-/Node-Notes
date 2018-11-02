@@ -18,7 +18,11 @@ if (command === 'add') {
         console.log("A note with the same title already exists. Please change the title.");
     }
 } else if (command === 'list') {
-    notes.getAll();
+    var allNotes = notes.getAll();
+    console.log(`Printing ${allNotes.length} note(s).`);
+    allNotes.forEach((note) => {
+        notes.logNotes(note);
+    });
 } else if (command === 'remove') {
     var noteRemoved = notes.removeNote(argv.title);
     var message = noteRemoved ? "Note was removed" : "Note not found";
